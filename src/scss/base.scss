@@ -10,15 +10,20 @@ $strokeDarkened: $secondaryColorLightened;
 $bgColorLight: #fff;
 $bgColorLightened: #fafafa;
 $bgColor: #f3f3f3;
-$successColor: #A7C958;
+$successColor: #a7c958;
 $warningColor: $primaryColor;
-$warningLight: lighten($warningColor, 15%);$weak: #F57A23;
-$moderate: #F5A623;
-$good: #FDEB00;
-$strong: #89DE55;$fontColor: #3f4047;
+$warningLight: lighten($warningColor, 15%);
+$weak: #f57a23;
+$moderate: #f5a623;
+$good: #fdeb00;
+$strong: #89de55;
+$fontColor: #3f4047;
 $fontColorLight: #fff;
 $fontColorLightened: #898b96;
-$fontFamily: "Apercu", sans-serif;
+$fontFamily: 'Apercu', sans-serif;
 $fontWeightHeavy: 700;
 $fontWeightNormal: 400;
 $fontWeightLight: 200;
+
+/* colors */
+$white: #fff;

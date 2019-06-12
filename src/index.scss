@@ -1,14 +1,31 @@
 @import './scss/base.scss';
 
 body {
-  margin: 0;
-  font-family: $fontFamily;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: $fontFamily;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.navbar-brand {
+	color: $primaryColor !important;
 }
 
+.navbar {
+	background-color: $white;
+}
+
+.account-info {
+	border: 1px solid #eee;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+
+.table td, .table th {
+	font-size: .9rem;
+}
+
+.refund {
+	color: $successColor;
+	font-weight: $fontWeightHeavy;
+}

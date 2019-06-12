@@ -3,25 +3,29 @@ import {connect} from 'react-redux';
 import {fetchData} from './actions';
 
 import Layout from './components/Layout/Layout';
-import MainNav from './components/MainNav/MainNav'
+import MainNav from './components/MainNav/MainNav';
+import Account from './components/Account/Account';
 
-class App extends Component { 
+class App extends Component {
   componentDidMount() {
     //get data from data.json
-    this.props.fetchData();
+    this
+      .props
+      .fetchData();
   }
   render() {
     const data = this.props.setData;
     console.log('data', data)
 
     const mappedData = data.map(ele => {
-      return ele.accounts.account.map(items => items)
+      return ele;
     })
 
     return (
       <div>
         <Layout>
-          <MainNav accountInfo={mappedData} />
+          <MainNav data={mappedData}/>
+          <Account accountInfo={mappedData}/>
         </Layout>
       </div>
     );
