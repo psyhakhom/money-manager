@@ -3,10 +3,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-<<<<<<< HEAD
 import Table from 'react-bootstrap/Table';
-=======
->>>>>>> 7d7af095094080cd6dec3bdc2f0759530c0b3762
 
 const account = (props) => {
   console.log('account', props);
@@ -15,10 +12,6 @@ const account = (props) => {
     .map(item => {
       return (item.accounts.account.map(ele => {
         return (
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d7af095094080cd6dec3bdc2f0759530c0b3762
           <div className="account-info" key={ele.id}>
             <div className="d-flex justify-content-between">
               <span>Available Balance: {ele.availableBalance.amount}</span>
@@ -29,15 +22,10 @@ const account = (props) => {
               <span>currency: {ele.currentBalance.currency}</span>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d7af095094080cd6dec3bdc2f0759530c0b3762
         )
       }))
     })
 
-<<<<<<< HEAD
   const transactionsInfo = props.accountInfo.map(item => {
     return item.trxs.transaction.map(ele => {
       return (
@@ -54,13 +42,10 @@ const account = (props) => {
 
   console.log(transactionsInfo)
 
-=======
->>>>>>> 7d7af095094080cd6dec3bdc2f0759530c0b3762
   return (
     <Container className="mt-5">
       <Row>
         <Col xs={12} md={6}>{accountInfo}</Col>
-<<<<<<< HEAD
         <Col xs={12}>
           <Table responsive>
             <thead>
@@ -77,9 +62,6 @@ const account = (props) => {
             </tbody>
           </Table>
         </Col>
-=======
-        <Col xs={12} md={6}>hello world</Col>
->>>>>>> 7d7af095094080cd6dec3bdc2f0759530c0b3762
       </Row>
     </Container>
 

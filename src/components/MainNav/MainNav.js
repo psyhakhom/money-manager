@@ -15,11 +15,7 @@ const mainNav = (props) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-<<<<<<< HEAD
                 <Nav.Link href="#home">Home</Nav.Link>
-=======
-                <Nav.Link href="#home">H ome</Nav.Link>
->>>>>>> 7d7af095094080cd6dec3bdc2f0759530c0b3762
                 <Nav.Link href="#link">Link</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
