@@ -1,9 +1,7 @@
 import React from 'react';
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Table from 'react-bootstrap/Table';
 
 const account = (props) => {
   console.log('account', props);
@@ -26,45 +24,10 @@ const account = (props) => {
       }))
     })
 
-  const transactionsInfo = props.accountInfo.map(item => {
-    return item.trxs.transaction.map(ele => {
-      return (
-        <tr key={ele.id}>
-          <td>{ele.date}</td>
-          <td>{ele.description.simple}</td>
-          <td>{ele.type}</td>
-          <td className={ele.type === 'REFUND' ? 'refund' : null}>{ele.type === 'REFUND' ? ele.amount.amount : '-$' + ele.amount.amount}</td>
-          <td>${ele.runningBalance.amount}</td>
-        </tr>
-      )
-    })
-  })
-
-  console.log(transactionsInfo)
-
   return (
     <Container className="mt-5">
-      <Row>
-        <Col xs={12} md={6}>{accountInfo}</Col>
-        <Col xs={12}>
-          <Table responsive>
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Balance</th>
-              </tr>
-              {transactionsInfo}
-            </thead>
-            <tbody>
-            </tbody>
-          </Table>
-        </Col>
-      </Row>
+      <Col xs={12}>{accountInfo}</Col>
     </Container>
-
   )
 }
 
