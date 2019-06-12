@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const mainNav = (props) => {
   console.log('mainNavProps', props.accountInfo)
   const accountInfo = props
-    .accountInfo
+    .data
     .map(item => {
       return (item.accounts.account.map(ele => {
         return (

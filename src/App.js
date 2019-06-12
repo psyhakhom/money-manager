@@ -4,7 +4,7 @@ import {fetchData} from './actions';
 
 import Layout from './components/Layout/Layout';
 import MainNav from './components/MainNav/MainNav';
-//import Account from './components/Account/Account';
+import Account from './components/Account/Account';
 
 class App extends Component {
   componentDidMount() {
@@ -24,8 +24,8 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <MainNav accountInfo={mappedData}/>
-
+          <MainNav data={mappedData}/>
+          <Account accountInfo={mappedData}/>
         </Layout>
       </div>
     );
