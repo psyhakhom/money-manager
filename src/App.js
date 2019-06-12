@@ -30,14 +30,16 @@ class App extends Component {
     .map(item => {
       return (item.accounts.account.map(ele => {
         return (
-          <Navbar bg="light" expand="lg" key={ele.id}>
+          <Navbar expand="lg" key={ele.id}>
             <Container>
-              <Navbar.Brand href="#home" fixed="top">{ele.accountName}</Navbar.Brand>
+              <Navbar.Brand fixed="top">
+                <Link to="/" className="navbar-brand">{ele.accountName}</Link>
+              </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav"/>
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/transactions">Transaction</Nav.Link>
+                  <Nav.Link ><NavLink to="/">Home</NavLink></Nav.Link>
+                  <Nav.Link ><NavLink to="/transactions">Transaction</NavLink></Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -50,16 +52,15 @@ class App extends Component {
       <div>
         <Layout>
           {accountInfo}
-          {/* <Account accountInfo={mappedData} />
-          <Transactions transactionData={mappedData} /> */}
           <Switch>
             <Route 
               exact path="/" 
               render={(routeProps) => (
               <Account {...routeProps}  accountInfo={mappedData} />
             )} />
-            <Route exact path="/transactions" 
-            render={(routeProps) => (
+            <Route 
+              exact path="/transactions" 
+              render={(routeProps) => (
               <Transactions {...routeProps} transactionData={mappedData} />
             )} />
           </Switch>
