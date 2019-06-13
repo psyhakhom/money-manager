@@ -20,7 +20,7 @@ const transactions = (props) => {
 
   console.log(transactionsInfo)
   return (
-    <Container className="mt-5">
+    <Container className="top-page-padding">
       <Table responsive>
         <thead>
           <tr>

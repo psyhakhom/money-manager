@@ -30,16 +30,16 @@ class App extends Component {
     .map(item => {
       return (item.accounts.account.map(ele => {
         return (
-          <Navbar expand="lg" key={ele.id}>
+          <Navbar expand="lg" key={ele.id} fixed="top">
             <Container>
-              <Navbar.Brand fixed="top">
-                <Link to="/" className="navbar-brand">{ele.accountName}</Link>
+              <Navbar.Brand >
+                <Link to="/"><img src="https://assets.website-files.com/5c794ffa39d1ad7a031cec44/5c79552aeb8c479f67aece6d_betterfin_logo_orange.svg" alt="logl" /></Link>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav"/>
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link ><NavLink to="/">Home</NavLink></Nav.Link>
-                  <Nav.Link ><NavLink to="/transactions">Transaction</NavLink></Nav.Link>
+                  <NavLink className="nav-link" to="/">Home</NavLink>
+                  <NavLink className="nav-link" to="/transactions">Transactions</NavLink>
                 </Nav>
               </Navbar.Collapse>
             </Container>
